@@ -12,7 +12,7 @@ print(f'PlayList : {p.title}')
 
 start = int(input("\n" + "number of first video : "))-1
 end = int(input("number of last video : "))
-quality = str(input("download quality like ( 360 , 480 , 720 )"))
+quality = str(input("download quality like ( 360 , 480 , 720 ) : "))
 
 for video in p.videos[start:end]:
 
