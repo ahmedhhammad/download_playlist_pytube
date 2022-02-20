@@ -1,5 +1,13 @@
 #اللهم صلي وسلم علي سيدنا محمد
 
+#Make sure that pytube is installed
+import subprocess
+import sys
+
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install" ,"--upgrade", package])
+install("Pytube")
+
 from pytube import Playlist
 from pytube import YouTube
 
@@ -11,7 +19,7 @@ def download_playlist():
     
     start = int(input("\n" + "number of first video : "))-1
     end = int(input("number of last video : "))
-    quality = str(input("download quality example ( 360 , 480 , 720 ) : "))
+    quality = str(input("download quality like ( 360 , 480 , 720 ) : "))
 
     for video in p.videos[start:end]:
 
