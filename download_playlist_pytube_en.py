@@ -2,10 +2,8 @@
 
 #Make sure that pytube is installed
 import subprocess
-import sys
-
-def install(package):
-    subprocess.check_call([sys.executable, "-m", "pip", "install" ,"--upgrade", package])
+def install(name):
+    subprocess.call(['pip', 'install', name])
 install("Pytube")
 
 from pytube import Playlist
