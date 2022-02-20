@@ -1,5 +1,12 @@
 #اللهم صلي وسلم علي سيدنا محمد
 
+#للتاكد ان مكتبة pytube مثبتة
+import subprocess
+import sys
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install" ,"--upgrade", package])
+install("Pytube")
+
 from pytube import Playlist
 from pytube import YouTube
 
